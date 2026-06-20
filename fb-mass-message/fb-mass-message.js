@@ -24,32 +24,42 @@
 
   const sendMessage = async (chatLinkElement) => {
     chatLinkElement.click();
-    await sleep(1500);
+    await sleep(2000);
 
     const inputField = document.querySelector(CONFIG.INPUT_SELECTOR);
     if (!inputField) return false;
 
-    // 3. Nhập nội dung vào ô chat
     inputField.focus();
-    document.execCommand("insertText", false, CONFIG.MESSAGE_CONTENT);
-    await sleep(500);
+
+    const dataTransfer = new DataTransfer();
+    dataTransfer.setData("text/plain", CONFIG.MESSAGE_CONTENT);
+
+    const pasteEvent = new ClipboardEvent("paste", {
+      clipboardData: dataTransfer,
+      bubbles: true,
+      cancelable: true,
+    });
+
+    inputField.dispatchEvent(pasteEvent);
+    await sleep(800);
 
     const sendBtn = document.querySelector(CONFIG.SEND_BUTTON_SELECTOR);
     if (sendBtn) {
       sendBtn.click();
+      await sleep(500);
+      return true;
     } else {
       const enterEvent = new KeyboardEvent("keydown", {
+        key: "Enter",
+        code: "Enter",
+        keyCode: 13,
+        which: 13,
         bubbles: true,
-        cancelable: true,
-        keyCode: 13,
-        keyCode: 13,
       });
       inputField.dispatchEvent(enterEvent);
+      return true;
     }
-
-    return true;
   };
-
   const init = async () => {
     const conversations = Array.from(
       document.querySelectorAll(CONFIG.CONVERSATION_SELECTOR),
