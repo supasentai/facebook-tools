@@ -7,3 +7,4 @@ A collection of lightweight, open-source automation scripts and utility tools fo
 - **Friend Request Sender (`fb-send-request.js`)**: Automatically sends friend requests to multiple users on the "People You May Know" or specific friend lists with adjustable safe delays.
 - **Data Scraper (`fb-data-scraper.js`)**: Extracts visible comment data (Author Name, Profile URL, Comment Content) from any Facebook post and exports it directly into a clean, Excel-compatible `.csv` file.
 - **Mass Unfriend (`fb-mass-unfriend.js`)**: Automates the process of unfriending multiple users directly from your Facebook friend list with safe, randomized delays to protect your account status.
+- **Cancel Sent Requests (`fb-cancel-sent-requests/index.js`)**: Automatically cancels all outgoing pending friend requests to prevent account rate limits and friend request blocks.
