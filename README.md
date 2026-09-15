@@ -10,3 +10,4 @@ A collection of lightweight, open-source automation scripts and utility tools fo
 - **Cancel Sent Requests (`fb-cancel-sent-requests/index.js`)**: Automatically cancels all outgoing pending friend requests to prevent account rate limits and friend request blocks.
 - **Leave All Groups (`fb-leave-all-groups/index.js`)**: Automates the process of leaving multiple Facebook groups from your joined groups list with auto-scrolling and safe execution delays.
 - **Auto Birthday Wisher (`fb-birthday-wisher/index.js`)**: Automatically sends randomized birthday wishes to friends having birthdays today with React-state sync and safe delays.
+- **Group Member Scraper (`fb-group-scraper/index.js`)**: Auto-scrolls through a Facebook group's member list, extracts profile details (Full Name, Profile URL, Role/Status), and exports the dataset directly into an Excel-ready `.csv` file.
