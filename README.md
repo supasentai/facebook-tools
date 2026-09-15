@@ -12,3 +12,4 @@ A collection of lightweight, open-source automation scripts and utility tools fo
 - **Auto Birthday Wisher (`fb-birthday-wisher/index.js`)**: Automatically sends randomized birthday wishes to friends having birthdays today with React-state sync and safe delays.
 - **Group Member Scraper (`fb-group-scraper/index.js`)**: Auto-scrolls through a Facebook group's member list, extracts profile details (Full Name, Profile URL, Role/Status), and exports the dataset directly into an Excel-ready `.csv` file.
 - **Auto Poke (`fb-auto-poke/index.js`)**: Automatically pokes back or pokes suggested friends on the Facebook Pokes page with randomized safety delays.
+- **Unfollow Pages (`fb-unfollow-pages/index.js`)**: Automates the process of unliking and unfollowing Facebook pages from your liked pages list to clean up your newsfeed.
