@@ -119,14 +119,14 @@
       // Nếu là link dạng ID: profile.php?id=1000...
       if (parsed.pathname === "/profile.php") {
         const id = parsed.searchParams.get("id");
-        return id ? `https://www.facebook.com/profile.php?id=${id}` : null;
+        return id ? `https://www.facebook.com/${id}` : null;
       }
 
       // Nếu là link dạng nhóm lồng profile: /groups/.../user/1000...
       if (parsed.pathname.includes("/user/")) {
         const match = parsed.pathname.match(/\/user\/([0-9a-zA-Z._]+)/);
         if (match) {
-          return `https://www.facebook.com/user/${match[1]}/`;
+          return `https://www.facebook.com/${match[1]}`;
         }
       }
 
